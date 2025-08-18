@@ -1,105 +1,97 @@
+/* Inicio bienvenidos */
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    background-image: url("./img/71NpTNgJdUL.webp");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover; /* <- Esta es la línea clave */
-
-    background-color: #ffffff;
-    height: 100vh;
-    overflow-y: auto;
+    min-height: 100vh;           /* ocupa toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;      /* de arriba hacia abajo */
+    font-family: Arial, sans-serif;
+    background: url('/img/vista-de-un-estadio-de-futbol-vacio.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
-/* Contenedor del formulario */
-form {
-    background-color: rgba(255, 255, 255, 0.92);
-    padding: 40px;
-    max-width: 420px;
-    margin: 60px auto;
-    border-radius: 25px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    backdrop-filter: blur(4px);
-    text-align: center;
-    transition: transform 0.3s ease;
+/* Wrapper para que main ocupe el espacio restante */
+.wrapper {
+    flex: 1;                     /* empuja el footer hacia abajo */
 }
 
-form:hover {
-    transform: scale(1.02);
-}
 
-h2 {
-    margin-bottom: 25px;
-    color: #145a32;
-    font-weight: 800;
-    font-size: 24px;
-}
 
-label {
-    display: block;
-    margin: 12px 0 5px;
-    color: #333;
-    text-align: left;
-    font-size: 14px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-    font-size: 14px;
-    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.541); /* gris transparente */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5); /* sombra blanca */
+    position: fixed; /* siempre arriba */
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: 1000;
 }
 
-input:focus {
-    border-color: #28b463;
-    box-shadow: 0 0 8px rgba(40,180,99,0.3);
-    outline: none;
+nav .logo img {
+    width: 15vh;
 }
 
-/* Botones */
-button {
-    margin-top: 20px;
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
 
-/* Estilo base de botones */
-button {
-    padding: 12px 24px;
-    font-size: 14px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+.nav-links a {
     color: white;
-    margin: 20px 8px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-/* Botón Enviar (amarillo) */
-button[type="submit"] {
-    background-color: #f1c40f;
+.nav-links a:hover {
+    color: green;
 }
 
-button[type="submit"]:hover {
-    background-color: #d4ac0d;
-    transform: scale(1.05);
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 40px 20px 10px;
+    font-size: 1rem;
 }
 
-/* Botón Resetear (rojo) */
-button[type="reset"] {
-    background-color: #e74c3c;
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-button[type="reset"]:hover {
-    background-color: #c0392b;
-    transform: scale(1.05);
+.footer-section {
+    flex: 1 1 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-top: 0;
+    color: #a5d6a7;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #a5d6a7;
+    margin-top: 20px;
+    font-size: 0.85rem;
 }
