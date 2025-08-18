@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("./img/estadio-de-futbol-lleno-de-gente.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover; /* <- Esta es la línea clave */
+    background-color: #ffffff;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 40px;
+    max-width: 420px;
+    margin: 60px auto;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    backdrop-filter: blur(4px);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #145a32;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+    color: #333;
+    text-align: left;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #28b463;
+    box-shadow: 0 0 8px rgba(40,180,99,0.3);
+    outline: none;
+}
+
+/* Botones */
+button {
+    margin-top: 20px;
+}
+
+/* Estilo base de botones */
+button {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    margin: 20px 8px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botón Enviar (amarillo) */
+button[type="submit"] {
+    background-color: #f1c40f;
+}
+
+button[type="submit"]:hover {
+    background-color: #d4ac0d;
+    transform: scale(1.05);
+}
+
+/* Botón Resetear (rojo) */
+button[type="reset"] {
+    background-color: #e74c3c;
+}
+
+button[type="reset"]:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
