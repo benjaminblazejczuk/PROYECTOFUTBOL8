@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalle del Producto</title>
+  <link rel="stylesheet" href="css/catalogo.css" />
+  <style>
+    .detalle-producto-container {
+      max-width: 1000px;
+      margin: 20vh auto 40px;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .detalle-producto-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+
+    .detalle-info {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .detalle-info h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #1b5e20;
+    }
+
+    .detalle-info p {
+      font-size: 1.1rem;
+      margin: 8px 0;
+      color: #333;
+    }
+
+    .detalle-info .precio {
+      font-size: 1.5rem;
+      color: #1b5e20;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo Fútbol 8" />
+        </a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar artículos..." disabled />
+      </div>
+      <div class="nav-links">
+        <a href="catalogo.html">Catálogo</a>
+        <a href="registro.html">Registro</a>
+        <a href="iniciodesesion.html">Iniciar Sesión</a>
+        <a href="masinfo.html">Más información</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="detalle-producto-container">
+
+      <img src="img/producto1.jpg" alt="Camiseta Deportiva Verde" />
+
+      <div class="detalle-info">
+        <h2 class="nombre">Camiseta Deportiva</h2>
+        <p class="talle">Talle: M</p>
+        <p class="peso">Peso: 250g</p>
+        <p class="color">Color: Verde</p>
+        <p class="descripcion">Camiseta de alta calidad, ideal para entrenamientos o partidos. Tejido transpirable y costuras reforzadas.</p>
+        <p class="precio">$19.99</p>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Sobre Nosotros</h3>
+        <p>Tienda de ropa deportiva con estilo y pasión por el fútbol.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Enlaces</h4>
+        <a href="index.html">Inicio</a><br />
+        <a href="catalogo.html">Catálogo</a><br />
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Tienda de Ropa Deportiva. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
