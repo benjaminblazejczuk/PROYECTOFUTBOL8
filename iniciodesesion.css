@@ -14,7 +14,7 @@ body {
 
 /* Contenedor del formulario */
 form {
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: rgba(0, 0, 0, 0.541); /* gris transparente */
     padding: 40px;
     max-width: 420px;
     margin: 60px auto;
@@ -31,7 +31,7 @@ form:hover {
 
 h2 {
     margin-bottom: 25px;
-    color: #145a32;
+    color: #ffffff;
     font-weight: 800;
     font-size: 24px;
 }
@@ -39,7 +39,7 @@ h2 {
 label {
     display: block;
     margin: 12px 0 5px;
-    color: #333;
+    color: #ffffff;
     text-align: left;
     font-size: 14px;
 }
@@ -107,7 +107,7 @@ button[type="reset"]:hover {
   text-align: center;
   font-size: 14px;
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
+  color: #ffffff;
 }
 
 .login-link a {
