@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    /* Asegúrate de que esta ruta sea correcta */
+    background: url('/img/vista-de-un-estadio-de-futbol-vacio.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white; 
+}
+
+/* 🟢 CORRECCIÓN: El wrapper se expande para empujar el footer */
+.wrapper {
+    flex-grow: 1; 
+    padding-top: 15vh; /* Espacio para el nav fijo */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+/* Navbar base (Mobile) */
+nav {
+    display: flex;
+    /* Usa space-between para separar logo y menu-icon */
+    justify-content: space-between; 
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.541);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* 🟢 CORRECCIÓN: Padding uniforme para separación de bordes */
+    padding: 0 20px; 
+    z-index: 1000;
+}
+
+nav .logo img {
+    width: 15vh;
+    margin-right: 0; 
+}
+
+/* Enlaces de navegación: OCULTOS por defecto en móvil */
+.nav-links {
+    display: none; 
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: green;
+}
+
+/* Ícono: VISIBLE por defecto en móvil */
+.menu-icon {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: block; 
+    /* El espaciado se maneja con el padding del NAV */
+    padding: 45px; 
+}
+
+/* Estilo del menú cuando la clase 'open' se activa con JS */
+.nav-links.open {
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: flex-start; 
+    padding: 10px 20px; /* Igual que el padding lateral del nav para alineación */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.nav-links.open a {
+    width: 100%; 
+    padding: 10px 0;
+    text-align: left; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ======================================= */
+/* ESTILOS DEL CONTENIDO PRINCIPAL */
+/* ======================================= */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bienvenidos-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.bienvenidos-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.bienvenidos-section h2 {
+    font-size: 2em;
+    color: #a5d6a7;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #a5d6a7;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px 20px 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer-bottom {
+    padding-top: 15px;
+    margin-top: 0;
+    font-size: 0.85rem;
+}
+
+/* ======================================= */
+/* MEDIA QUERIES (PANTALLAS GRANDES) */
+/* ======================================= */
+
+@media (min-width: 850px) {
+    /* Oculta el icono de menú en pantallas grandes */
+    .menu-icon {
+        display: none;
+    }
+
+    /* Muestra el menú de navegación normal y horizontal */
+    .nav-links {
+        display: flex; 
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        gap: 30px; 
+    }
+
+    /* Restaura el nav para escritorio */
+    nav {
+        justify-content: space-between; 
+        padding: 0 20px;
+    }
+}
+
+/* Ajustes para el contenido principal en pantallas grandes */
+@media (min-width: 768px) {
+    .bienvenidos-section h1 {
+        font-size: 4em;
+    }
+    .bienvenidos-section p {
+        font-size: 1.5em;
+    }
+    .bienvenidos-section h2 {
+        font-size: 2.5em;
+    }
+    .social-links a {
+        font-size: 1.2em;
+    }
+}
