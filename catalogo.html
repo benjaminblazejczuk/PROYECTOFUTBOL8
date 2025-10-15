@@ -10,18 +10,16 @@
 
   <header>
     <nav>
-        <div class="logo">
-            <a href="index.html">
-              <img src="img/ChatGPT Image 18 ago 2025, 02_16_23 p.m..png" alt="Logo Fútbol 8" />
-            </a>
-          </div>
-
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar artículos..." disabled />
+      <div class="logo">
+        <img src="img/ChatGPT Image 18 ago 2025, 02_16_23 p.m..png" alt="Logo Fútbol 8">
       </div>
 
-      <div class="nav-links">
-        <a href="catalogo.html">Catálogo</a>
+      <!-- Ícono hamburguesa (visible en móvil) -->
+      <div class="menu-icon" id="menuIcon">&#9776;</div>
+
+      <!-- Enlaces de navegación -->
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Inicio</a>
         <a href="registro.html">Registro</a>
         <a href="iniciodesesion.html">Iniciar Sesión</a>
         <a href="masinfo.html">Más información</a>
@@ -31,18 +29,72 @@
 
   <div class="wrapper">
     <main class="catalogo">
+      <h1>Catálogo de Productos</h1>
       <section class="contenedor-productos">
 
+        <!-- Producto 1 -->
         <div class="producto" id="producto001">
-          <img src="img/producto1.jpg" alt="Producto 1" />
+          <img src="img/remera moron.webp" alt="Producto 1" />
+          <div class="nombre">Camiseta Titular</div>
+          <div class="talle">Talle: M, L, XL</div>
+          <div class="color">Color: Verde Esmeralda</div>
+          <div class="precio">$45.000 ARS</div>
         </div>
 
+        <!-- Producto 2 -->
         <div class="producto" id="producto002">
-          <img src="img/producto2.jpg" alt="Producto 2" />
+          <img src="img/pantalon.webp" alt="Producto 2" />
+          <div class="nombre">Pantalón de Entrenamiento</div>
+          <div class="talle">Talle: S, M, L</div>
+          <div class="color">Color: Negro</div>
+          <div class="precio">$32.000 ARS</div>
         </div>
 
+        <!-- Producto 3 -->
         <div class="producto" id="producto003">
-          <img src="img/producto3.jpg" alt="Producto 3" />
+          <img src="img/guantes.webp" alt="Producto 3" />
+          <div class="nombre">Guantes de Portero</div>
+          <div class="peso">Peso: 200g</div>
+          <div class="precio">$25.500 ARS</div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="producto" id="producto004">
+          <img src="img/alternativa.webp" alt="Producto 4" />
+          <div class="nombre">Camiseta Alternativa</div>
+          <div class="talle">Talle: M, L</div>
+          <div class="color">Color: Gris Oscuro</div>
+          <div class="precio">$42.000 ARS</div>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="producto" id="producto005">
+          <img src="img/pelota.webp" alt="Producto 5" />
+          <div class="nombre">Balón Profesional</div>
+          <div class="peso">Peso: 450g</div>
+          <div class="precio">$85.000 ARS</div>
+        </div>
+
+        <div class="producto" id="producto006">
+          <img src="img/canilleras.webp" alt="Producto 6" />
+          <div class="nombre">Canilleras Profesionales</div>
+          <div class="peso">Peso: 45g</div>
+          <div class="precio">$20.000 ARS</div>
+        </div>
+
+        <div class="producto" id="producto007">
+          <img src="img/termica.webp" alt="Producto 7" />
+          <div class="nombre">Termica de entrenamiento</div>
+            <div class="talle">Talle: M, L, XL y XXL</div>
+          <div class="color">Color: Gris Oscuro, Blanco, Negro</div>
+          <div class="precio">$30.000 ARS</div>
+        </div>
+
+        <div class="producto" id="producto008">
+          <img src="img//vendas.webp" alt="Producto 8" />
+          <div class="nombre">Vendas</div>
+          <div class="peso">Color: Negro, Blanco</div>
+          <div class="precio">$20.000 ARS</div>
         </div>
 
       </section>
@@ -57,15 +109,24 @@
       </div>
       <div class="footer-section">
         <h4>Enlaces</h4>
-        <a href="#">Inicio</a><br />
-        <a href="#">Catálogo</a><br />
-        <a href="#">Contacto</a>
+        <a href="index.html">Inicio</a><br />
+        <a href="catalogo.html">Catálogo</a><br />
+        <a href="masinfo.html">Contacto</a>
       </div>
     </div>
     <div class="footer-bottom">
       © 2025 Tienda de Ropa Deportiva. Todos los derechos reservados.
     </div>
   </footer>
+
+  <script>
+    const menuIcon = document.getElementById('menuIcon');
+    const navLinks = document.getElementById('navLinks');
+
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
 
 </body>
 </html>

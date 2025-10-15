@@ -1,4 +1,7 @@
-/* Fondo y estructura base */
+/* ======================================= */
+/* ESTRUCTURA GENERAL */
+/* ======================================= */
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -7,189 +10,255 @@ body {
     font-family: Arial, sans-serif;
     background: url('../img/vista-de-un-estadio-de-futbol-vacio.jpg') no-repeat center center fixed;
     background-size: cover;
-  }
-  
-  .wrapper {
-    flex: 1;
-  }
-  
-  /* Header / Navbar */
-  nav {
+    color: white;
+}
+
+.logo{}
+
+.wrapper {
+    flex-grow: 1;
+    padding-top: 15vh; 
+}
+
+/* ======================================= */
+/* NAVBAR (MOBILE FIRST) */
+/* ======================================= */
+
+nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px 20px;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.541);
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    padding: 0 20px;
     z-index: 1000;
     box-sizing: border-box;
-  }
-  
-  /* Logo */
-  .logo img {
-    height: 60px;
-    max-width: 100%;
-  }
-  
-  /* Buscador */
-  .search-bar {
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
-    min-width: 200px;
-  }
-  
-  .search-bar input {
-    width: 100%;
-    max-width: 400px;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #fff;
-    color: #555;
-    box-sizing: border-box;
-  }
-  
-  /* Enlaces de navegación */
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-end;
-  }
-  
-  .nav-links a {
+}
+
+nav .logo img {
+    width: 15vh;
+}
+
+/* Ocultamos buscador en mobile */
+.search-bar {
+    display: none;
+}
+
+/* Enlaces ocultos en mobile */
+.nav-links {
+    display: none;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
-    white-space: nowrap;
-  }
-  
-  .nav-links a:hover {
+}
+
+.nav-links a:hover {
     color: green;
-  }
-  
-  
-  /* Catálogo */
-  .catalogo {
-    margin-top: 20vh;
-    padding: 40px 20px;
-  }
-  
-  .contenedor-productos {
+}
+
+/* Ícono hamburguesa visible en mobile */
+.menu-icon {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+    padding: 15px;
+}
+
+.nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: flex-start;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links.open a {
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ======================================= */
+/* CATÁLOGO Y PRODUCTOS */
+/* ======================================= */
+
+.catalogo {
+    padding: 20px;
+    text-align: center;
+}
+
+.catalogo h1 {
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.contenedor-productos {
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
-    padding: 40px;
+    padding: 30px 15px;
     margin: 0 auto;
     max-width: 1200px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .producto {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.producto {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    width: 250px;
+    width: 100%;
+    max-width: 300px;
     padding: 15px;
     text-align: center;
     transition: transform 0.3s ease;
-  }
-  
-  .producto img {
+}
+
+.producto img {
     width: 100%;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
-  }
-  
-  .producto .nombre {
+}
+
+/* (Los textos dentro de .producto ya están centrados con text-align: center) */
+
+.producto .nombre {
     margin: 10px 0 5px;
     color: #333;
     font-size: 1.2rem;
     font-weight: bold;
-  }
-  
-  .producto .talle,
-  .producto .peso,
-  .producto .color,
-  .producto .precio {
-    margin: 4px 0;
-    color: #444;
-  }
-  
-  .producto .precio {
+}
+
+.producto .precio {
     font-weight: bold;
     color: #1b5e20;
-  }
-  
-  .producto:hover {
+}
+
+.producto:hover {
     transform: translateY(-5px);
-  }
-  
-  /* Footer */
-  footer {
+}
+
+/* ======================================= */
+/* FOOTER */
+/* ======================================= */
+
+footer {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 40px 20px 10px;
     font-size: 1rem;
     box-sizing: border-box;
-  }
-  
-  .footer-container {
+}
+
+.footer-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-  
-  .footer-section {
-    flex: 1 1 200px;
-  }
-  
-  .footer-section h3,
-  .footer-section h4 {
-    margin-top: 0;
-    color: #a5d6a7;
-  }
-  
-  .footer-section a {
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.footer-section a {
     color: white;
     text-decoration: none;
-  }
-  
-  .footer-section a:hover {
+}
+
+.footer-section a:hover {
     text-decoration: underline;
-  }
-  
-  .footer-bottom {
+}
+
+.footer-bottom {
     text-align: center;
     padding-top: 15px;
     border-top: 1px solid #a5d6a7;
     margin-top: 20px;
     font-size: 0.85rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
-  }
-  
-  
+}
+
+/* ======================================= */
+/* MEDIA QUERIES PARA ESCRITORIO */
+/* ======================================= */
+
+@media (min-width: 768px) {
+    /* Muestra links y buscador en escritorio */
+
+    
+    .search-bar {
+        display: flex;
+        flex: 1 1 300px;
+        justify-content: center;
+    }
+
+    .search-bar input {
+        width: 100%;
+        max-width: 400px;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        background-color: #fff;
+        color: #555;
+        box-sizing: border-box;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        background-color: transparent;
+        position: static;
+    }
+
+    .nav-links a {
+        padding: 0;
+        border-bottom: none;
+    }
+
+    /* Productos en múltiples columnas en escritorio */
+    .contenedor-productos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .producto {
+        max-width: 250px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+}
+
